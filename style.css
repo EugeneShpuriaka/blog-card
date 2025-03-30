@@ -50,6 +50,7 @@
 
 body {
     height: 100vh;
+    min-width: 360px;
     display: grid;
     place-items: center;
     margin: 0;
