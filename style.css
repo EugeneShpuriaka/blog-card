@@ -1,0 +1,122 @@
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+    --black: hsl(0, 0%, 0%);
+    --base-font: 16px;
+    --base-offset: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-optical-sizing: auto;
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    font-optical-sizing: auto;
+    src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    font-optical-sizing: auto;
+    src: url('./assets/fonts/static/Figtree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    font-optical-sizing: auto;
+    src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+    font-size: var(--base-font);
+    font-weight: 400;
+    font-optical-sizing: auto;
+    letter-spacing: -0.4px;
+    background-color: var(--yellow);
+}
+
+.blog-card {
+    width: 320px;
+    padding: var(--base-offset);
+    color: var(--gray-950);
+    background-color: var(--white);
+    border: 1px solid var(--gray-950);
+    border-radius: 20px;
+    box-shadow: 10px 10px 0 var(--black);
+
+    .blog-card__image {
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .tags {
+        display: flex;
+        gap: 4px;
+        font-weight: 800;
+        
+        .tag {
+            padding: 2px 10px;
+            line-height: 2;
+            background-color: var(--yellow);
+            border-radius: 4px;
+        }
+    }
+
+    .publish-meta {
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .blog-card__body {
+        color: var(--gray-500);
+    }
+
+    .author {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        gap: 8px;
+
+        .author__image {
+            aspect-ratio: 1;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+
+    .blog-card {
+        width: 360px;
+    }
+}
